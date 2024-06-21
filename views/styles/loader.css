@@ -1,0 +1,56 @@
+.loader {
+    background-color: white;
+    z-index: 999;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+.loader {
+    background-color: white;
+    z-index: 999;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+.loader div {
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -42%);
+    background-color: #3a1c71;
+    background-color: #d76d77;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    animation: siam 2s linear infinite;
+}
+
+.loader .four {
+    animation-delay: 0s;
+}
+.loader .three {
+    animation-delay: 0.5s;
+}
+.loader .two {
+    animation-delay: 1s;
+}
+.loader .one {
+    animation-delay: 1.5s;
+}
+
+@keyframes siam {
+    0% {
+        transform: translate(-50%, -42%) scale(1);
+        opacity: 0;
+    }
+    50% {
+        transform: translate(-50%, -42%) scale(2);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -42%) scale(4);
+        opacity: 0;
+    }
+}

@@ -1,0 +1,75 @@
+.throwlert {
+    position: fixed;
+    z-index: 40;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0);
+    pointer-events: none;
+    transition: 0.3s linear;
+}
+.throwlert-active {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.alert-box {
+    z-index: 45;
+    pointer-events: all;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.07),
+        0 4px 8px rgba(0, 0, 0, 0.07), 0 8px 16px rgba(0, 0, 0, 0.07),
+        0 16px 32px rgba(0, 0, 0, 0.07), 0 32px 64px rgba(0, 0, 0, 0.07);
+    width: 80%;
+    min-width: 250px;
+    max-width: 500px;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -60%) scale(0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s linear;
+    opacity: 0;
+}
+
+.active-alert-box {
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -60%) scale(1);
+    opacity: 1;
+}
+
+.alert-close-button {
+    align-self: flex-end;
+    padding-right: 10px;
+    padding-top: 8px;
+}
+.alert-close-button button {
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: lighter;
+    color: #999;
+    cursor: pointer;
+}
+.alert-type {
+    padding: 10px 20px 10px;
+    font-size: 3rem;
+    color: #66bb6a;
+}
+
+.type-success {
+    color: #66bb6a;
+}
+.type-error {
+    color: #ff4040;
+}
+.alert-dialog {
+    padding: 10px 10px 20px;
+    text-align: center;
+}

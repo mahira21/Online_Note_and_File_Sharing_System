@@ -1,0 +1,79 @@
+Options -Indexes
+#to block directory access
+
+RewriteEngine on
+#ErrorDocument 404 /webtech/notefused/
+#ErrorDocument 403 /webtech/notefused/
+
+
+#Redirect 301 /webtech/notefused/mynotes.html  /webtech/notefused/mynotes
+#Redirect 301 /webtech/notefused/index.php  /webtech/notefused/
+#why this only works with full directory??why not regex??
+
+
+
+
+RewriteRule ^settings$  views/settings.php [L]
+
+RewriteRule ^registration$  views/reg.php [L]
+
+RewriteRule ^login$  views/login.php [L]
+
+
+RewriteRule ^mynotes$  views/mnotes.php [L]
+
+
+RewriteRule ^file$  views/file.php [L]
+RewriteRule ^myfiles$  views/myfiles.php [L]
+
+RewriteRule ^go$  views/short.php [L]
+RewriteRule ^myurls$  views/myurls.php [L]
+
+
+RewriteRule ^resetform$  views/resetform.php [L]
+RewriteRule ^resetconfirm$  views/resetconfirm.php [L]
+
+RewriteRule ^attachments/(.*) models/images/$1 [L]
+
+
+
+#admin
+
+RewriteRule ^dashboard$  views/dashboard.php [L]
+RewriteRule ^planmoderation$  views/planmoderation.php [L]
+RewriteRule ^notesmoderation$  views/notesmoderation.php [L]
+RewriteRule ^filesmoderation$  views/filesmoderation.php [L]
+RewriteRule ^urlsmoderation$  views/urlsmoderation.php [L]
+RewriteRule ^permissionmoderation$  views/permissionmoderation.php [L]
+RewriteRule ^messages$  views/messages.php [L]
+RewriteRule ^message2$  views/message2.php [L]
+
+
+RewriteRule ^contact$  views/contact2.php [L]
+
+
+
+
+
+
+
+
+
+#RewriteRule ^go.html$  short.php [L]
+RewriteRule ^go.php$  short.php [L]
+
+#RewriteRule ^mynotes.html$ mnotes.php [L]
+
+RewriteRule ^([a-z0-9]*)$   index.php?id=$1 [L]
+#RewriteRule ^go/([a-z0-9]+)$  urlredirector.php?id=$1 [L] #abandoned
+
+RewriteRule ^go/([a-z0-9]+)$  controllers/urlredirectormodule.php?id=$1 [L]
+#RewriteRule ^file/([a-z0-9]+)$  downloader.php?id=$1 [L] #abandoned
+#RewriteRule ^file/([a-z0-9]+)$  handlers/myfileshandler.php?id=$1 [L] #before mvc
+RewriteRule ^file/([a-z0-9]+)$  controllers/myfileshandler.php?id=$1 [L]
+
+php_value upload_max_filesize 10M
+php_value post_max_size 11M
+php_value max_input_time 300
+php_value max_execution_time 300
+php_value max_file_uploads 500

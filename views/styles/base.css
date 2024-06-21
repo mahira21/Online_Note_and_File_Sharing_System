@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'IBM Plex Sans';
+    text-decoration: none;
+}
+html {
+    -ms-overflow-style: -ms-autohiding-scrollbar; /*to hide scrollbar in IE*/
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    background-color: white;
+    z-index: -1;
+    padding: 35px;
+}
+.sidebar {
+    width: 20%;
+    margin-right: 20px;
+    float: left;
+}
+.sidemenu {
+    position: sticky;
+    top: 0;
+}
+
+.fuse {
+    background-color: rgb(255, 255, 255);
+    width: 80%;
+}
+.mini-container {
+    width: 100%;
+    height: fit-content;
+    padding-top: 0;
+}
+
+@media only screen and (max-width: 1599px) {
+    .holder {
+        min-width: 100%;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .sidebar {
+        display: none;
+    }
+    .editor {
+        width: 100%;
+        height: fit-content;
+        overflow-y: visible;
+    }
+    .fuse {
+        width: 100%;
+    }
+    .mini-container {
+        padding: 5px;
+        margin-top: 0px;
+    }
+
+    #exampleSpan {
+        display: block;
+        width: 100%;
+        font-size: 1.1em;
+        text-align: center;
+    }
+    .url-box {
+        width: calc(100% - 150px);
+    }
+    .button-box {
+        width: 150px;
+    }
+    .button-box button {
+        display: inline-block;
+        font-size: 1em;
+    }
+}
+@media only screen and (max-width: 450px) {
+    .container {
+        padding: 5px;
+    }
+    .fuse {
+        width: 100%;
+    }
+    .mini-container {
+        padding: 5px;
+        padding-top: 20px;
+        margin-top: 0px;
+    }
+}
+@media only screen and (min-width: 1600px) {
+    .holder {
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+}

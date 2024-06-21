@@ -1,0 +1,134 @@
+#choose {
+    display: none;
+}
+.row1 {
+    text-align: left;
+    width: 100%;
+    font-size: 2.5em;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #ffaf7b;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+.row2 {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin: 0;
+    border: 5px dashed #dadada;
+    height: 200px;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.row2-drag {
+    animation: drag 2s linear infinite;
+}
+
+@keyframes drag {
+    0% {
+        width: 100%;
+    }
+
+    50% {
+        width: 70%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+.row2 label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.row3 {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    display: none;
+}
+.row4 {
+    display: block;
+    margin: 10px 0 10px 0;
+}
+.row4 div {
+    display: block;
+    width: fit-content;
+    margin: 5px auto;
+}
+.row5 {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin: 10px 0 10px 0;
+}
+.row6 {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin: 10px 0 10px 0;
+}
+
+.row6 progress,
+.row6 progress[value] {
+    display: none;
+    width: 100%;
+    height: 50px;
+}
+
+.res {
+    display: block;
+    margin: 10px 0 10px 0;
+}
+.res .res-child {
+    display: block;
+    padding: 0px 0 10px 0;
+    margin: 8px 0;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2), 0px 0px 1px rgba(0, 0, 0, 0.1);
+    transition: 0.2s linear;
+    border-radius: 3px;
+}
+
+.res .res-child:hover {
+    box-shadow: 0px 2px 15px -5px rgba(0, 0, 0, 0.6);
+}
+
+.res-child-name {
+    background-color: #ffb07b28;
+    color: #d76d77;
+    padding: 10px 10px;
+}
+
+.res-child-link {
+    padding: 10px;
+}
+
+.choose-label,
+.row5 button {
+    display: inline-flex;
+    height: 32px;
+    border: none;
+    outline: none;
+    width: 150px;
+    background: -webkit-linear-gradient(120deg, #3a1c71, #d76d77, #ffaf7b);
+    background: -ms-linear-gradient(120deg, #3a1c71, #d76d77, #ffaf7b);
+    background-size: 500%;
+    background-position: left;
+    transition: 0.5s;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+    text-transform: uppercase;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+.choose-label:hover,
+.row5 button:hover {
+    background-position: right;
+}

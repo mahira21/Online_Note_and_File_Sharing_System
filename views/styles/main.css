@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap');
+:root {
+    --edsetH: 0px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'IBM Plex Sans';
+}
+html {
+    -ms-overflow-style: -ms-autohiding-scrollbar; /*to hide scrollbar in IE*/
+}
+
+.container {
+    display: flex;
+    position: absolute;
+    width: 90%;
+    height: 80vh;
+    background-color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+.sidebar {
+    width: 20%;
+    margin-right: 20px;
+    height: 80vh;
+    display: inline-block;
+}
+#drp1,
+#drp2 {
+    display: none;
+}
+
+.editor {
+    display: inline-block;
+    position: relative;
+    width: 80%;
+    height: 80vh;
+    background-color: white;
+    box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.bar {
+    width: 100%;
+    border: 1px solid rgb(218, 218, 218);
+    border-bottom: none;
+}
+.head-bar {
+    width: 100%;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title {
+    width: fit-content;
+}
+.title a {
+    display: inline-block;
+    color: #d76d77; /*if gradient fails*/
+    font-size: 1.5em;
+    font-weight: 900;
+    font-family: sans-serif;
+    background: -webkit-linear-gradient(
+        120deg,
+        #3a1c71,
+        #d76d77,
+        #ffaf7b
+    ); /*this and bottom few lines are for gradient text*/
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-position: center;
+    background-size: 200%;
+}
+.title:hover {
+    background-position: right;
+}
+
+#ham {
+    background: none;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    outline: none;
+    border: none;
+    font-size: 1.5em;
+    background: -webkit-linear-gradient(
+        120deg,
+        #3a1c71,
+        #d76d77,
+        #ffaf7b
+    ); /*this and bottom few lines are for gradient text*/
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-left: 8px;
+}
+
+#ham:focus {
+    outline: none;
+}
+#expand {
+    width: 32px;
+    height: 32px;
+    outline: none;
+    border: none;
+    background-color: white;
+    margin-right: 10px;
+}
+
+#expand svg {
+    fill: #d76d77;
+    transition: 0.2s;
+    cursor: pointer;
+    transform: scale(0.8);
+    -webkit-tap-highlight-color: transparent;
+}
+
+#expand:hover svg {
+    fill: #3a1c71;
+}
+.edit-settings {
+    /* display: none; */
+    margin: 0 7px 5px;
+    color: #aaa;
+}
+
+.sub-settings {
+    display: inline-block;
+    margin: 0 5px 5px;
+    padding: 5px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+}
+
+.sep-div {
+    display: inline-block;
+}
+.sep-div input[type='radio'] {
+    margin-right: 3px;
+}
+
+.sep-div select {
+    border: 1px solid #dedede;
+}
+
+.sep-div input[type='text'] {
+    border: 1px solid #eee;
+    outline: none;
+    padding: 2px;
+    color: #aaa;
+}
+
+.sep-div select,
+.sep-div select option {
+    color: #aaa;
+    outline: none;
+}
+
+.zoom-buttons {
+    display: inline-flex;
+    align-items: center;
+}
+.zoom-buttons span {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+#tzpercent {
+    width: 80px;
+    text-align: center;
+}
+
+#tzmin,
+#tzplus {
+    color: #aaa;
+    width: 16px;
+    height: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+#tzmin i,
+#tzplus i {
+    font-size: smaller;
+}
+
+.fuse {
+    width: 100%;
+    height: calc(80vh - var(--edsetH));
+    outline: none;
+    resize: none;
+    background-color: transparent;
+    border: 1px solid rgb(218, 218, 218);
+    border-bottom: none;
+}
+textarea {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    resize: none;
+    border: none;
+    background-color: transparent;
+    padding: 10px;
+    font-size: 1em;
+    font-family: 'IBM Plex Sans';
+    word-spacing: 0.3em;
+    text-align: justify;
+}
+
+.mini-container {
+    width: 100%;
+    height: fit-content;
+    padding: 40px;
+    margin-top: 50px;
+}
+
+.alter-options {
+    position: absolute;
+    bottom: 15px;
+    right: 25px;
+}
+.option-toggler {
+    display: none;
+}
+#createNewLink,
+#createNewFile,
+#createNewNote,
+#expandOptions {
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 40px;
+    height: 40px;
+    background-color: #3a1c71;
+    border-radius: 50%;
+    margin: 10px 0;
+    box-shadow: 1px 3px 7px -2px rgba(0, 0, 0, 0.9);
+    background: -webkit-linear-gradient(120deg, #3a1c71, #d76d77, #ffaf7b);
+    background-size: 1000%;
+    background-position: left;
+    padding: 5px;
+    transition: 0.2s linear;
+}
+#createNewLink i,
+#createNewFile i,
+#createNewNote i,
+#expandOptions i {
+    color: white;
+    font-size: 1.5em;
+}
+#createNewLink:hover,
+#createNewFile:hover,
+#createNewNote:hover,
+#expandOptions:hover {
+    transform: scale(1.1);
+    box-shadow: 3px 3px 10px -2px rgba(0, 0, 0, 0.8);
+    background-position: right;
+}
+
+#createNewLink[title] {
+    background-color: white;
+    border: none;
+    color: #3a1c71;
+}
+
+@media only screen and (max-width: 1000px) {
+    .sidebar {
+        display: none;
+    }
+    .editor {
+        width: 100%;
+    }
+    .mini-container {
+        padding: 20px;
+        margin-top: 0px;
+    }
+}
+@media only screen and (max-height: 400px) {
+    .alter-options {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    #ham {
+        display: none;
+    }
+    .title {
+        padding-left: 10px;
+    }
+}

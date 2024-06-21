@@ -1,0 +1,137 @@
+.example-span {
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: -10px;
+}
+#exampleSpan {
+    display: block;
+    text-align: left;
+    width: 100%;
+    font-size: 2.5em;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #ffaf7b;
+}
+.row2 {
+    margin-bottom: 50px;
+}
+.result-row {
+    display: none;
+}
+.alert {
+    display: none;
+    text-align: center;
+    color: #555;
+    margin-top: 20px;
+}
+.row1 {
+    width: 100%;
+    display: flex;
+    height: 60px;
+}
+.url-box {
+    display: inline-block;
+    margin: 0;
+    height: 100%;
+    width: calc(100% - 200px);
+}
+.urlBox {
+    box-shadow: inset 3px 3px 4px rgba(0, 0, 0, 0.1),
+        inset -3px -3px 5px rgba(255, 255, 255, 1),
+        3px 0px 5px rgba(0, 0, 0, 0.07);
+
+    border: 2px solid #ffaf7b;
+    border-right: none;
+    padding: 8px 5px;
+    font-size: 1.2em;
+    color: #333;
+    text-align: left;
+    outline: none;
+    background-color: rgb(250, 250, 250);
+    transition: 0.5s;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    height: 100%;
+    width: 100%;
+}
+.urlBox:focus {
+    border: 2px solid #ffaf7b;
+    border-right: none;
+}
+.error-class {
+    border: 2px solid rgb(251, 75, 75);
+}
+.error-class::placeholder {
+    color: rgb(245, 75, 75);
+    opacity: 1;
+}
+.button-box,
+.copy-button-box {
+    margin: 0;
+    width: 200px;
+    height: 100%;
+    display: inline-block;
+}
+.button-box button {
+    height: 100%;
+    border: none;
+    outline: none;
+    width: 100%;
+    background: -webkit-linear-gradient(120deg, #3a1c71, #d76d77, #ffaf7b);
+    background: -ms-linear-gradient(120deg, #3a1c71, #d76d77, #ffaf7b);
+
+    background-size: 500%;
+    background-position: left;
+    transition: 0.5s;
+    color: #fff;
+    font-size: 1.5em;
+    cursor: pointer;
+    padding: 8px 20px;
+    text-transform: uppercase;
+}
+.button-box button:hover {
+    background-position: right;
+}
+.result-url-box {
+    width: calc(100% - 50px);
+}
+.copy-button-box {
+    width: 60px;
+}
+
+@media only screen and (max-width: 800px) {
+    #exampleSpan {
+        display: block;
+        width: 100%;
+        font-size: 1.1em;
+        text-align: center;
+    }
+    .url-box {
+        width: calc(100% - 150px);
+    }
+    .button-box {
+        width: 150px;
+    }
+    .button-box button {
+        display: inline-block;
+        font-size: 1em;
+    }
+}
+@media only screen and (max-width: 450px) {
+    #exampleSpan {
+        display: block;
+        width: 100%;
+        font-size: 1.1em;
+        text-align: center;
+    }
+    .url-box {
+        width: calc(100% - 80px);
+    }
+    .button-box {
+        width: 80px;
+    }
+    .button-box button {
+        font-size: 0.8em;
+        padding: 5px;
+    }
+}

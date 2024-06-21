@@ -1,0 +1,168 @@
+.row-plate,
+.row-head {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2), 0px 0px 1px rgba(0, 0, 0, 0.1);
+    transition: 0.2s linear;
+    margin-bottom: 10px;
+}
+.row-plate:hover {
+    box-shadow: 0px 2px 15px -5px rgba(0, 0, 0, 0.6);
+}
+.row1,
+.row2,
+.row3,
+.row4 {
+    display: flex;
+}
+
+.col1,
+.col2,
+.col3,
+.col4,
+.col5 {
+    color: #555;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    word-break: break-all;
+    padding: 15px 5px;
+}
+.col1 {
+    width: 100%;
+    font-weight: 600;
+}
+.col2,
+.col3 {
+    width: 100%;
+}
+
+.col4,
+.col5 {
+    width: 50%;
+}
+
+/* unvisited link */
+a:link {
+    color: #555;
+}
+
+/* visited link */
+a:visited {
+    color: #555;
+}
+
+/* mouse over link */
+a:hover {
+    color: #d76d77;
+}
+
+/* selected link */
+a:active {
+    color: #ffaf7b;
+}
+.col4 a {
+    color: rgb(92, 167, 92);
+}
+.col5 a {
+    color: rgb(240, 124, 124);
+}
+
+@media only screen and (max-width: 1400px) {
+    .row-head {
+        display: none;
+    }
+    .row-plate {
+        margin-bottom: 20px;
+    }
+    .col1 {
+        width: 100%;
+        box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+        background: -webkit-linear-gradient(120deg, #d76d77, #ffaf7b);
+        color: white;
+    }
+    .col2,
+    .col3 {
+        border-bottom: 1px solid #efefef;
+    }
+    .col2,
+    .col3,
+    .col4,
+    .col5 {
+        border-left: 1px solid #ededed;
+        border-right: 1px solid #ededed;
+    }
+    .col4,
+    .col5 {
+        border-bottom: 1px solid #efefef;
+        padding: 10px 5px;
+    }
+    .col4 {
+        border-right: none;
+    }
+    .col5 {
+        border-left: none;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .holder {
+        max-width: 100%;
+    }
+}
+
+@media only screen and (min-width: 1401px) {
+    .row-plate,
+    .row-head {
+        display: flex;
+    }
+
+    .row1 {
+        width: 10%;
+    }
+    .row2 {
+        width: 40%;
+    }
+    .row3 {
+        width: 30%;
+    }
+    .row4 {
+        width: 20%;
+    }
+    .col1 {
+        width: 100%;
+        background-color: #d76d7710;
+        color: #d76d77;
+    }
+    .row-plate .col2 {
+        padding: 25px 15px;
+    }
+    .col2,
+    .col3 {
+        width: 100%;
+    }
+
+    .col4,
+    .col5 {
+        width: 50%;
+    }
+
+    .row-head {
+        font-weight: 600;
+        position: sticky;
+        top: 0;
+        background-color: white;
+        box-shadow: 0px 2px 15px -5px rgba(0, 0, 0, 0.6);
+    }
+
+    .row-head .col1 {
+        background-color: #d76d77;
+        color: white;
+    }
+}
+@media only screen and (min-width: 1600px) {
+    .holder {
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+}

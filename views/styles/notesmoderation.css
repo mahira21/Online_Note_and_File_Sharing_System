@@ -1,0 +1,205 @@
+.mini-ad-container {
+    width: 70%;
+    margin: 0px auto;
+}
+.search-row {
+    margin-top: 40px;
+    width: 100%;
+}
+.search-row input,
+.sitewide-action input {
+    width: 100%;
+    padding: 5px 20px;
+    box-shadow: inset 3px 3px 4px rgba(0, 0, 0, 0.05),
+        inset -3px -3px 5px rgba(255, 255, 255, 1),
+        3px 0px 5px rgba(0, 0, 0, 0.07);
+
+    border: 1px solid #ccc;
+    padding: 5px 20px;
+    font-size: 1.2rem;
+    color: #555;
+    text-align: left;
+    outline: none;
+    background-color: rgb(250, 250, 250);
+    transition: 0.2s;
+    border-radius: 3px;
+    height: 100%;
+    width: 100%;
+    text-transform: lowercase;
+}
+.search-row input:focus {
+    border: 1px solid #ffaf7b;
+    border: 1px solid #999;
+}
+.search-row input::placeholder {
+    color: #bbb;
+    text-transform: lowercase;
+    font-weight: 400;
+}
+
+.sitewide-action {
+    /* border: 1px solid #aaa; */
+    text-transform: lowercase;
+    color: #555;
+
+    /* border-bottom: 1px solid #aaa; */
+}
+.sitewide-action .r1,
+.sitewide-action .r2 {
+    padding: 10px 1px 10px 1px;
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-start;
+    background-color: #efefef;
+    border-radius: 5px;
+}
+.sitewide-action .r1 {
+    margin-bottom: 5px;
+}
+.sitewide-action .r1 div:last-of-type,
+.sitewide-action .r2 div:last-of-type {
+    margin-left: auto;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+    -moz-appearance: textfield;
+}
+
+.sitewide-action input {
+    width: 70px;
+    padding: 3px 5px 0px 0px;
+    font-size: 1rem;
+    text-align: right;
+}
+
+.sitewide-action button {
+}
+
+.sitewide-action button {
+    width: 80px;
+    padding: 7px 5px;
+    border-radius: 3px;
+    border: none;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    color: #fff;
+    background: -webkit-linear-gradient(-90deg, #ff521d, #ff3c3c);
+    outline: none;
+    transition: 0.2s linear;
+}
+.sitewide-action button:hover {
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+}
+.sitewide-action button:active {
+    transform: scale(0.8);
+}
+
+.note-plate-row {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    background-color: white;
+}
+
+.note-plate {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid grey;
+    border-bottom: 1px solid #ddd;
+
+    color: #555;
+    padding: 10px 0;
+}
+
+.row1 {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 5px 0px;
+    margin-bottom: 10px;
+}
+.noteID {
+    color: #2e6e31;
+
+    margin-bottom: 10px;
+}
+.noteID a {
+    color: #2e6e31;
+    font-size: 1.2rem;
+    word-wrap: break-word;
+    word-break: break-all;
+    color: #333;
+}
+.username {
+    display: inline-flex;
+    font-size: 1rem;
+    font-weight: 400;
+    color: mediumslateblue;
+    color: #e78b4d;
+    text-transform: lowercase;
+    color: #ffaf7b;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+.row2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.dates-holder {
+    display: flex;
+    font-size: 0.8rem;
+    align-content: center;
+}
+
+.dates-holder div {
+    padding-right: 5px;
+    margin-right: 5px;
+    border-right: 1px solid rgb(112, 112, 112);
+}
+.dates-holder div:last-child {
+    border-right: none;
+}
+
+.action-button-holder a {
+    width: 80px;
+    padding: 3px 10px;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    outline: none;
+    transition: 0.2s linear;
+    background: -webkit-linear-gradient(-90deg, #bcf7ff, #26c6da);
+    background: -webkit-linear-gradient(-90deg, #aaa, #666);
+    background: -webkit-linear-gradient(-90deg, #66bb6a, #43a047);
+}
+
+.pagination {
+    margin-top: 30px;
+}
+
+@media (min-width: 1500px) {
+    .mini-ad-container {
+        width: 60%;
+    }
+}
+@media (max-width: 1000px) {
+    .mini-ad-container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 800px) {
+    .mini-ad-container {
+        width: calc(100% - 20px);
+    }
+}
